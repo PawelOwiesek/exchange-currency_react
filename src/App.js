@@ -2,6 +2,8 @@ import Cash from "./Cash";
 import ClientCurrency from "./ClientCurrency";
 import CurrencyExpected from "./CurrencyExpected";
 import Button from "./Button";
+import ExchangeRate from "./ExchangeRate";
+import Result from "./Result";
 
 function App() {
   return (
@@ -15,17 +17,8 @@ function App() {
             <ClientCurrency />
             <CurrencyExpected />
             <Button />
-            <p className="calculator__form--paragraph">
-              Exchange rate:<strong
-                className="calculator__form--rate"
-              ></strong>
-            </p>
-
-            <p className="calculator__form--paragraph">
-              Amount after conversion:<strong
-                className="calculator__form--rate"
-              ></strong>
-            </p>
+            <ExchangeRate />
+            <Result />
           </fieldset>
         </form>
       </section>
