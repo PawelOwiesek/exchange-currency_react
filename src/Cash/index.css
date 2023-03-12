@@ -1,0 +1,14 @@
+.calculator__fieldset--label {
+    font-size: 22px;
+    width: 250px;
+    display: inline-block;
+}
+
+.calculator__fieldset--field {
+    min-width: 300px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 25px;
+    padding: 10px;
+    border: 2px solid #000000;
+}
