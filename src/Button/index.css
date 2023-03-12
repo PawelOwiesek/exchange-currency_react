@@ -1,0 +1,12 @@
+.calculator__form--button {
+    font-size: 22px;
+    width: 100%;
+    background-color: #637bae6e;
+    align-self: center;
+    padding: 5px;
+    border-radius: 25px;
+    text-align: center;
+    color: white;
+    letter-spacing: 8px;
+    font-weight: 900;
+}
