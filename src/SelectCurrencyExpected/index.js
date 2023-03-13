@@ -1,9 +1,8 @@
 
-
-const GivenCurrency = () => (
+const SelectCarrencyExpected = () => (
     <p>
         <label
-        ><span className="calculator__fieldset--label">Your currency:</span>
+        ><span className="calculator__fieldset--label">Convert to:</span>
             <select className="calculator__fieldset--field">
                 <option value="Eur">Euro</option>
                 <option value="Usd">U.S. Dollar</option>
@@ -12,6 +11,6 @@ const GivenCurrency = () => (
             </select>
         </label>
     </p>
-)
+);
 
-export default GivenCurrency;
+export default SelectCarrencyExpected;

@@ -1,6 +1,6 @@
 import "./index.css"
 
-const CurrentRate = () => (
+const ExchangeRate = () => (
     <p className="calculator__form--paragraph">
         Exchange rate:<strong
             className="calculator__form--rate"
@@ -8,4 +8,4 @@ const CurrentRate = () => (
     </p>
 );
 
-export default CurrentRate;
+export default ExchangeRate;

@@ -1,8 +1,9 @@
 
-const ReturnedCarrency = () => (
+
+const SelectClientCurrency = () => (
     <p>
         <label
-        ><span className="calculator__fieldset--label">Convert to:</span>
+        ><span className="calculator__fieldset--label">Your currency:</span>
             <select className="calculator__fieldset--field">
                 <option value="Eur">Euro</option>
                 <option value="Usd">U.S. Dollar</option>
@@ -11,6 +12,6 @@ const ReturnedCarrency = () => (
             </select>
         </label>
     </p>
-);
+)
 
-export default ReturnedCarrency;
+export default SelectClientCurrency;

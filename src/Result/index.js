@@ -1,5 +1,5 @@
 
-const FinalResult = () => {
+const Result = () => {
     <p className="calculator__form--paragraph">
         Amount after conversion:<strong
             className="calculator__form--rate"
@@ -7,4 +7,4 @@ const FinalResult = () => {
     </p>
 }
 
-export default FinalResult;
+export default Result;
