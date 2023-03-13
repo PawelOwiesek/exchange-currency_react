@@ -12,7 +12,6 @@ const Cash = () => (
                 step="any"
                 min="1"
                 required
-                autofocus
             /></label>
     </p>
 );
