@@ -1,7 +1,5 @@
-import "./index.css";
+const Button = () => (
+    <button className="body__button">Change image</button>
+)
 
-const RecalculateButton = () => (
-    <button className="calculator__form--button">Recalculate</button>
-);
-
-export default RecalculateButton;
+export default Button;
