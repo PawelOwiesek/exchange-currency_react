@@ -1,5 +1,6 @@
+import "./index.css";
+
 const Button = () => (
-    <button className="body__button">Change image</button>
-)
+    <button className="body__button">Change image</button>)
 
 export default Button;

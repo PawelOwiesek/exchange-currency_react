@@ -1,3 +1,4 @@
+// import { useState } from "react";
 import Button from "./Button";
 import Cash from "./Cash";
 import SelectClientCurrency from "./SelectClientCurrency";
@@ -8,20 +9,23 @@ import Result from "./Result";
 import Section from "./Section";
 
 function App() {
+
   return (
+
     <>
-      <Button />
+      <Button
+      />
       <Section
         title="Currency calculator"
         body={
           <>
-            <Cash />,
-            <SelectClientCurrency />,
+            <Cash />
+            <SelectClientCurrency />
             <SelectCurrencyExpected />
           </>}
         result={
           <>
-            <RecalculateButton />,
+            <RecalculateButton />
             < ExchangeRate />
             <Result />
           </>}
