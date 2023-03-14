@@ -1,6 +1,6 @@
 import "./index.css";
 
-const Button = () => (
-    <button className="body__button">Change image</button>)
+const Button = ({ toggleImage }) => (
+    <button onClick={toggleImage} className="body__button">Change image</button>)
 
 export default Button;
