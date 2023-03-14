@@ -9,7 +9,6 @@ html {
 body {
   display: grid;
   justify-content: center;
-  margin-top: 25px;
   font-family: "lato", sans-serif;
 
 }
