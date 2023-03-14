@@ -1,10 +1,17 @@
 .body__button {
+    margin: 180px 0 0 350px;
     max-width: 120px;
     border-radius: 25px;
     background-color: #637bae6e;
     font-weight: bold;
     transition: 1s;
     cursor: pointer;
+}
+
+@media(max-width: 480px) {
+    .body__button {
+        margin: 100px 0 0 0;
+    }
 }
 
 .body__button:hover {
