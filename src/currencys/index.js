@@ -7,7 +7,7 @@ export const currencyValues = [
         id: 1
     },
     {
-        currencyName: "Dolar amerykanski",
+        currencyName: "US dolar ",
         short: "Usd",
         value: 4.2928,
         id: 2
