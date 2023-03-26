@@ -6,8 +6,8 @@ const SelectCarrencyExpected = () => {
     const onSelectChange = ({ target }) => setConvertCurrency(target.value);
     return (
         <p>
-            <label
-            ><span className="calculator__fieldset--label">Convert to:</span>
+            <label>
+                <span className="calculator__fieldset--label">Convert to:</span>
                 <select
                     value={convertCurrency}
                     onChange={onSelectChange}
