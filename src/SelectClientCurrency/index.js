@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const SelectClientCurrency = () => {
-    const [currency, setCurrency] = useState("");
+    const [currency, setCurrency] = useState("Euro");
 
     const onSelectChange = ({ target }) => setCurrency(target.value);
     return (
