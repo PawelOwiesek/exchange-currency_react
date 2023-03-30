@@ -1,4 +1,3 @@
-
 export const currencyValues = [
     {
         currencyName: "Euro",

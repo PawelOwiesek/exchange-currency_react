@@ -1,4 +1,3 @@
-
 const Result = () => {
     <p className="calculator__form--paragraph">
         Amount after conversion:<strong

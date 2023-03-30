@@ -1,5 +1,3 @@
-
-
 const Container = ({ image, children }) => {
     const backgroundStyle = {
         backgroundImage: `url(${image})`,
