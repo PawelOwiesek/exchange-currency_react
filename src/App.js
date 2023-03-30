@@ -59,7 +59,7 @@ function App() {
               currency={currency}
               convertCurrency={convertCurrency}
             />
-            < ExchangeRate />
+            < ExchangeRate currency={currency} />
             <Result />
           </>}
       />
