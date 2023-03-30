@@ -8,7 +8,6 @@
     cursor: pointer;
 }
 
-
 @media(max-width: 780px) {
     .body__button {
         margin: 100px 0 0 0;
