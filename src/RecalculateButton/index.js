@@ -3,8 +3,8 @@ import "./index.css";
 const RecalculateButton = ({ cashValue, currency, convertCurrency }) => {
     const calculateResult = () => {
         const cashInput = +cashValue;
-        const currencySelect = parseFloat(currency);
-        const convertCurrencySelect = parseFloat(convertCurrency);
+        const currencySelect = +currency;
+        const convertCurrencySelect = +convertCurrency;
         const result = ((cashInput * currencySelect) / convertCurrencySelect);
         console.log(cashInput);
         console.log(currency);
