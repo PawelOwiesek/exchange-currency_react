@@ -1,19 +1,17 @@
-import { useState } from "react";
-import { currencyValues } from "../currencys"
+import { currencyValues } from "../currencys";
 
-const SelectCarrencyExpected = () => {
-    const [convertCurrency, setConvertCurrency] = useState(currencyValues[1].id);
-    const onSelectChange = ({ target }) => setConvertCurrency(target.value);
+const SelectCarrencyExpected = ({ convertCurrency, onSecondSelectChange }) => {
+
     return (
         <p>
             <label>
                 <span className="calculator__fieldset--label">Convert to:</span>
                 <select
                     value={convertCurrency}
-                    onChange={onSelectChange}
+                    onChange={onSecondSelectChange}
                     className="calculator__fieldset--field">
                     {currencyValues.map((convertCurrency => (<option
-                        value={convertCurrency.currencyName}
+                        value={convertCurrency.value}
                         key={convertCurrency.id}>
                         {convertCurrency.currencyName}
                     </option>
@@ -22,6 +20,6 @@ const SelectCarrencyExpected = () => {
             </label>
         </p>
     );
+};
 
-}
 export default SelectCarrencyExpected;

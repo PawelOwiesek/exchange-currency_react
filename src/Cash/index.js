@@ -1,9 +1,6 @@
 import "./index.css";
-import { useState } from "react";
 
-const Cash = () => {
-    const [cash, setCash] = useState("");
-
+const Cash = ({ cashValue, handleCashChange }) => {
     return (
         <p>
             <label
@@ -11,8 +8,8 @@ const Cash = () => {
             >Enter the amount of cash:</span
                 >
                 <input
-                    value={cash}
-                    onChange={({ target }) => setCash(target.value)}
+                    value={cashValue}
+                    onChange={handleCashChange}
                     type="number"
                     className="calculator__fieldset--field"
                     step="any"
@@ -22,7 +19,6 @@ const Cash = () => {
             </label>
         </p>
     );
-
 };
 
 

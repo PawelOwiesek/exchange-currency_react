@@ -1,10 +1,7 @@
-import { useState } from "react";
 import { currencyValues } from "../currencys";
 
-const SelectClientCurrency = () => {
-    const [currency, setCurrency] = useState(currencyValues[0].id);
+const SelectClientCurrency = ({ currency, onSelectChange }) => {
 
-    const onSelectChange = ({ target }) => setCurrency(target.value);
     return (
         <p>
             <label>
@@ -16,16 +13,16 @@ const SelectClientCurrency = () => {
                 >
                     {currencyValues.map((currency => (<option
                         key={currency.id}
-                        value={currency.currencyName}
+                        value={currency.value}
                     >
                         {currency.currencyName}
                     </option>
-                    )))}
+                    )))};
                 </select>
             </label>
         </p>
-    )
-}
+    );
+};
 
 
 
