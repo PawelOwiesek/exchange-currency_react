@@ -8,11 +8,19 @@ import ExchangeRate from "./ExchangeRate";
 import Result from "./Result";
 import Section from "./Section";
 import Container from "./Container";
-
+import { currencyValues } from "./currencys";
 function App() {
 
   const [image, setImage] = useState(`https://i.postimg.cc/wBrKx1wZ/images.jpg`);
   const [showImage1, setShowImage1] = useState(true);
+  const [currency, setCurrency] = useState(currencyValues[0].id);
+  const onSelectChange = ({ target }) => setCurrency(target.value);
+  const [convertCurrency, setConvertCurrency] = useState(currencyValues[0].id);
+  const onSecondSelectChange = ({ target }) => setConvertCurrency(target.value);
+  const [cashValue, setCash] = useState("");
+  const handleCashChange = ({ target }) => {
+    setCash(target.value);
+  };
 
   const toggleImage = () => {
     if (showImage1) {
@@ -20,9 +28,9 @@ function App() {
     } else {
       setImage(`https://i.postimg.cc/wBrKx1wZ/images.jpg`)
     }
-
     setShowImage1(!showImage1);
-  }
+  };
+
   return (
 
     <Container image={image}>
@@ -32,21 +40,31 @@ function App() {
         title="Currency calculator"
         body={
           <>
-            <Cash />
-            <SelectClientCurrency />
-            <SelectCurrencyExpected />
+            <Cash cashValue={cashValue}
+              handleCashChange={handleCashChange}
+            />
+            <SelectClientCurrency
+              currency={currency}
+              onSelectChange={onSelectChange}
+            />
+            <SelectCurrencyExpected
+              convertCurrency={convertCurrency}
+              onSecondSelectChange={onSecondSelectChange}
+            />
           </>}
         result={
           <>
-            <RecalculateButton />
+            <RecalculateButton
+              cashValue={cashValue}
+              currency={currency}
+              convertCurrency={convertCurrency}
+            />
             < ExchangeRate />
             <Result />
           </>}
       />
     </Container>
-
-
   );
-}
+};
 
 export default App;
