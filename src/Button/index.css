@@ -2,6 +2,7 @@
     display: block;
     position: absolute;
     max-width: 120px;
+    border: 2px solid #000000;
     border-radius: 25px;
     background-color: #637bae;
     font-weight: bold;
