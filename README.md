@@ -3,7 +3,7 @@
 
 ![Screenshot 2023-03-31 154515](https://user-images.githubusercontent.com/121549413/229137662-b0d1c63e-ee1f-428a-8554-ac006d3fb218.png)
 
-
+## Try it out at:https://pawelowiesek.github.io/exchange-currency_react/
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
