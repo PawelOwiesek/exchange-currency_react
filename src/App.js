@@ -13,6 +13,14 @@ function App() {
 
   const [image, setImage] = useState(`https://i.postimg.cc/wBrKx1wZ/images.jpg`);
   const [showImage1, setShowImage1] = useState(true);
+  const toggleImage = () => {
+    if (showImage1) {
+      setImage(`https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`)
+    } else {
+      setImage(`https://i.postimg.cc/wBrKx1wZ/images.jpg`)
+    }
+    setShowImage1(!showImage1);
+  };
   const [currency, setCurrency] = useState(currencyValues[0].id);
   const onSelectChange = ({ target }) => setCurrency(target.value);
   const [convertCurrency, setConvertCurrency] = useState(currencyValues[0].id);
@@ -21,14 +29,13 @@ function App() {
   const handleCashChange = ({ target }) => {
     setCash(target.value);
   };
-
-  const toggleImage = () => {
-    if (showImage1) {
-      setImage(`https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`)
-    } else {
-      setImage(`https://i.postimg.cc/wBrKx1wZ/images.jpg`)
-    }
-    setShowImage1(!showImage1);
+  const [result, setResult] = useState("");
+  const handleButtonClick = () => {
+    const cashInput = +cashValue;
+    const currencySelect = +currency;
+    const convertCurrencySelect = +convertCurrency;
+    const result = ((cashInput * currencySelect) / convertCurrencySelect);
+    setResult(result.toFixed(2))
   };
 
   return (
@@ -58,9 +65,10 @@ function App() {
               cashValue={cashValue}
               currency={currency}
               convertCurrency={convertCurrency}
+              handleButtonClick={handleButtonClick}
             />
-            < ExchangeRate currency={currency} />
-            <Result />
+            < ExchangeRate convertCurrency={convertCurrency} />
+            <Result result={result} />
           </>}
       />
     </Container>
