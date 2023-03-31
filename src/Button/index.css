@@ -1,22 +1,21 @@
 .body__button {
-    margin: 180px 0 0 650px;
+    display: block;
+    position: absolute;
     max-width: 120px;
     border-radius: 25px;
-    background-color: #637bae6e;
+    background-color: #637bae;
     font-weight: bold;
     transition: 1s;
     cursor: pointer;
+    top: 46px;
+    left: 35%;
 }
 
 @media(max-width: 780px) {
     .body__button {
-        margin: 100px 0 0 0;
-    }
-}
-
-@media(max-width: 480px) {
-    .body__button {
-        margin: 100px 0 0 0;
+        position: relative;
+        left: 10%;
+        top: 10px;
     }
 }
 
