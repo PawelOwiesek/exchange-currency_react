@@ -1,8 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 import Cash from "./Cash";
-import SelectClientCurrency from "./SelectClientCurrency";
-import SelectCurrencyExpected from "./SelectCurrencyExpected";
+import SelectCurrencies from "./SelectCurrencies";
 import RecalculateButton from "./RecalculateButton";
 import ExchangeRate from "./ExchangeRate";
 import Result from "./Result";
@@ -37,7 +36,7 @@ function App() {
     const currencySelect = +currency;
     const convertCurrencySelect = +convertCurrency;
     const result = ((cashInput * currencySelect) / convertCurrencySelect);
-    setResult(result)
+    setResult(result.toFixed(2))
   };
 
   return (
@@ -52,11 +51,9 @@ function App() {
             <Cash cashValue={cashValue}
               handleCashChange={handleCashChange}
             />
-            <SelectClientCurrency
+            <SelectCurrencies
               currency={currency}
               onSelectChange={onSelectChange}
-            />
-            <SelectCurrencyExpected
               convertCurrency={convertCurrency}
               onSecondSelectChange={onSecondSelectChange}
             />
