@@ -13,6 +13,11 @@ function App() {
 
   const [image, setImage] = useState(`https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`);
   const [showImage1, setShowImage1] = useState(true);
+  const [currency, setCurrency] = useState(currencyValues[0].id);
+  const [convertCurrency, setConvertCurrency] = useState(currencyValues[0].id);
+  const [cashValue, setCash] = useState("");
+  const [result, setResult] = useState("");
+
   const toggleImage = () => {
     if (showImage1) {
       setImage(`https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`)
@@ -21,15 +26,14 @@ function App() {
     }
     setShowImage1(!showImage1);
   };
-  const [currency, setCurrency] = useState(currencyValues[0].id);
+
   const onSelectChange = ({ target }) => setCurrency(target.value);
-  const [convertCurrency, setConvertCurrency] = useState(currencyValues[0].id);
   const onSecondSelectChange = ({ target }) => setConvertCurrency(target.value);
-  const [cashValue, setCash] = useState("");
+
   const handleCashChange = ({ target }) => {
     setCash(target.value);
   };
-  const [result, setResult] = useState("");
+
   const handleButtonClick = () => {
     const cashInput = +cashValue;
     const currencySelect = +currency;
