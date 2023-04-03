@@ -8,7 +8,7 @@ import ExchangeRate from "./ExchangeRate";
 import Result from "./Result";
 import Section from "./Section";
 import Container from "./Container";
-import { currencyValues } from "./currencys";
+import { currencyValues } from "./currencies";
 function App() {
 
   const [image, setImage] = useState(`https://i.postimg.cc/wBrKx1wZ/images.jpg`);
