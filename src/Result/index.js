@@ -1,11 +1,10 @@
-const Result = ({ result }) => {
-    return (
-        <p className="calculator__form--paragraph">
-            Amount after conversion:<strong
-                className="calculator__form--rate"
-            >{result}</strong>
-        </p>
-    );
-};
+const Result = ({ result }) => (
+    <p className="results">
+        Amount after conversion:
+        <strong>
+            {result}
+        </strong>
+    </p>
+);
 
 export default Result;
