@@ -1,4 +1,4 @@
-import { currencyValues } from "../currencys";
+import { currencyValues } from "../currencies";
 
 const SelectClientCurrency = ({ currency, onSelectChange }) => {
 
