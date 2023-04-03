@@ -1,10 +1,10 @@
 import "./index.css"
 
-const ExchangeRate = ({ currency }) => (
+const ExchangeRate = ({ convertCurrency }) => (
     <p className="results">
         Exchange rate:
         <strong>
-            {currency}
+            {convertCurrency}
         </strong>
     </p>
 );
