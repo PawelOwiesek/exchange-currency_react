@@ -67,7 +67,7 @@ function App() {
               convertCurrency={convertCurrency}
               handleButtonClick={handleButtonClick}
             />
-            < ExchangeRate convertCurrency={convertCurrency} />
+            < ExchangeRate currency={currency} />
             <Result result={result} />
           </>}
       />
