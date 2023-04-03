@@ -6,7 +6,7 @@ import SelectCurrencyExpected from "./SelectCurrencyExpected";
 import RecalculateButton from "./RecalculateButton";
 import ExchangeRate from "./ExchangeRate";
 import Result from "./Result";
-import Section from "./Section";
+import SectionForm from "./SectionForm";
 import Container from "./Container";
 import { currencyValues } from "./currencies";
 function App() {
@@ -47,7 +47,7 @@ function App() {
     <Container image={image}>
       <Button toggleImage={toggleImage}
       />
-      <Section
+      <SectionForm
         title="Currency calculator"
         body={
           <>

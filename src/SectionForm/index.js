@@ -1,9 +1,10 @@
 import "./index.css";
 
-const Section = ({ title, body, result }) => {
+const SectionForm = ({ title, body, result }) => {
     const onFormSubmit = (event) => {
         event.preventDefault();
     };
+
     return (
         <section className="calculator">
             <h1 className="calculator__title">{title}</h1>
@@ -17,4 +18,4 @@ const Section = ({ title, body, result }) => {
     );
 };
 
-export default Section;
+export default SectionForm;
