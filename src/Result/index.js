@@ -2,7 +2,7 @@ const Result = ({ result }) => (
     <p className="results">
         Amount after conversion:
         <strong>
-            {result}
+            {result.toFixed(2)}
         </strong>
     </p>
 );

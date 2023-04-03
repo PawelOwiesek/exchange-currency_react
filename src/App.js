@@ -10,19 +10,19 @@ import SectionForm from "./SectionForm";
 import Container from "./Container";
 import { currencyValues } from "./currencies";
 
-const CLOUDS_BACKGROUN_URL = `https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`;
+const CLOUDS_BACKGROUND_URL = `https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`;
 const MONEY_BACKGROUND_URL = `https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`;
 
 function App() {
 
-  const [image, setImage] = useState(CLOUDS_BACKGROUN_URL);
+  const [image, setImage] = useState(CLOUDS_BACKGROUND_URL);
   const [currency, setCurrency] = useState(currencyValues[0].id);
   const [convertCurrency, setConvertCurrency] = useState(currencyValues[0].id);
   const [cashValue, setCash] = useState("");
   const [result, setResult] = useState("");
 
   const toggleImage = () => {
-    setImage(prevImage => prevImage === CLOUDS_BACKGROUN_URL ? MONEY_BACKGROUND_URL : CLOUDS_BACKGROUN_URL);
+    setImage(prevImage => prevImage === CLOUDS_BACKGROUND_URL ? MONEY_BACKGROUND_URL : CLOUDS_BACKGROUND_URL);
   };
 
   const onSelectChange = ({ target }) => setCurrency(target.value);
@@ -37,7 +37,7 @@ function App() {
     const currencySelect = +currency;
     const convertCurrencySelect = +convertCurrency;
     const result = ((cashInput * currencySelect) / convertCurrencySelect);
-    setResult(result.toFixed(2))
+    setResult(result)
   };
 
   return (
