@@ -9,22 +9,20 @@ import Result from "./Result";
 import SectionForm from "./SectionForm";
 import Container from "./Container";
 import { currencyValues } from "./currencies";
+
+const CLOUDS_BACKGROUN_URL = `https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`;
+const MONEY_BACKGROUND_URL = `https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`;
+
 function App() {
 
-  const [image, setImage] = useState(`https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`);
-  const [showImage1, setShowImage1] = useState(true);
+  const [image, setImage] = useState(CLOUDS_BACKGROUN_URL);
   const [currency, setCurrency] = useState(currencyValues[0].id);
   const [convertCurrency, setConvertCurrency] = useState(currencyValues[0].id);
   const [cashValue, setCash] = useState("");
   const [result, setResult] = useState("");
 
   const toggleImage = () => {
-    if (showImage1) {
-      setImage(`https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`)
-    } else {
-      setImage(`https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`)
-    }
-    setShowImage1(!showImage1);
+    setImage(prevImage => prevImage === CLOUDS_BACKGROUN_URL ? MONEY_BACKGROUND_URL : CLOUDS_BACKGROUN_URL);
   };
 
   const onSelectChange = ({ target }) => setCurrency(target.value);
