@@ -1,14 +1,11 @@
+import "./index.css"
 const Container = ({ image, children }) => {
     const backgroundStyle = {
-        backgroundImage: `url(${image})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        height: "100vh",
-        width: "100vw",
+        backgroundImage: `url(${image})`
     };
 
     return (
-        <div className="backgroundImages" style={backgroundStyle}>
+        <div className="container" style={backgroundStyle}>
             {children}
         </div>
     );
