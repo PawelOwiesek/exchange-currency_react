@@ -14,6 +14,7 @@
 .calculator__title:hover {
     color: crimson;
     transform: scale(1.2);
+    margin-bottom: 30px;
 }
 
 .calculator__form {
