@@ -11,13 +11,12 @@ import { currencyValues } from "./currencies";
 
 const CLOUDS_BACKGROUND_URL = `https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`;
 const MONEY_BACKGROUND_URL = `https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`;
-const currencyValue = currencyValues[0].id;
+const DEFAULT_CURRENCY = currencyValues[0].id;
 
 function App() {
-
   const [image, setImage] = useState(CLOUDS_BACKGROUND_URL);
-  const [currency, setCurrency] = useState(currencyValue);
-  const [convertCurrency, setConvertCurrency] = useState(currencyValue);
+  const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
+  const [convertCurrency, setConvertCurrency] = useState(DEFAULT_CURRENCY);
   const [cashValue, setCash] = useState("");
   const [result, setResult] = useState("");
 
