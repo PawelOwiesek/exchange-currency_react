@@ -1,12 +1,15 @@
 import "./index.css"
 
-const ExchangeRate = ({ convertCurrency }) => (
-    <p className="results">
-        Exchange rate:
-        <strong>
-            {convertCurrency}
-        </strong>
-    </p>
-);
+const ExchangeRate = ({ currency, convertCurrency }) => {
+    const finalCurrency = currency / convertCurrency;
+    return (
+        <p className="results">
+            Exchange rate:
+            <strong>
+                {finalCurrency.toFixed(2)}
+            </strong>
+        </p>
+    );
+};
 
 export default ExchangeRate;
