@@ -1,25 +1,20 @@
 .calculator {
     padding: 15px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 .calculator__title {
     color: #0000ff;
-    margin: 0 auto;
     transition: all 0.5s cubic-bezier(0.67, 0.05, 0, 0.89);
     cursor: pointer;
-    padding-bottom: 15px;
+    align-self: center;
 }
 
 .calculator__title:hover {
     color: crimson;
     transform: scale(1.2);
     margin-bottom: 30px;
-}
-
-.calculator__form {
-    display: flex;
-    flex-direction: column;
 }
 
 .calculator__fieldset {
