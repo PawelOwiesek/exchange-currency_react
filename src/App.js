@@ -30,11 +30,11 @@ function App() {
   const handleCashChange = ({ target }) => {
     setCash(target.value);
   };
-  const convertCurrencySelect = currencyValues.find(({ currencyName }) => currencyName === convertCurrency).value
+  const convertCurrencyValue = currencyValues.find(({ currencyName }) => currencyName === convertCurrency).value
   const handleButtonClick = () => {
     const cashInput = +cashValue;
     const currencySelect = +currency;
-    const result = ((cashInput * currencySelect) / convertCurrencySelect);
+    const result = ((cashInput * currencySelect) / convertCurrencyValue);
     setResult(result.toFixed(2) + " " + convertCurrency)
   };
 
@@ -66,7 +66,7 @@ function App() {
               convertCurrency={convertCurrency}
               handleButtonClick={handleButtonClick}
             />
-            < ExchangeRate currency={currency} convertCurrencySelect={convertCurrencySelect} />
+            < ExchangeRate currency={currency} convertCurrencyValue={convertCurrencyValue} />
             <Result result={result} />
           </>}
       />
