@@ -30,7 +30,7 @@ const SelectCurrencies = ({ currency, onSelectChange, convertCurrency, onSecondS
                         onChange={onSecondSelectChange}
                         className="calculator__fieldset--field">
                         {currencyValues.map((convertCurrency => (<option
-                            value={convertCurrency.value}
+                            value={convertCurrency.currencyName}
                             key={convertCurrency.id}>
                             {convertCurrency.currencyName}
                         </option>
