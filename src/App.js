@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Clock from "./Clock";
 import Button from "./Button";
 import Cash from "./Cash";
 import SelectCurrencies from "./SelectCurrencies";
@@ -11,7 +12,7 @@ import { currencyValues } from "./currencies";
 
 const CLOUDS_BACKGROUND_URL = `https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`;
 const MONEY_BACKGROUND_URL = `https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`;
-const DEFAULT_CURRENCY = currencyValues[0].id;
+const DEFAULT_CURRENCY = currencyValues[0].currencyName;
 
 function App() {
   const [image, setImage] = useState(CLOUDS_BACKGROUND_URL);
@@ -26,22 +27,21 @@ function App() {
 
   const onSelectChange = ({ target }) => setCurrency(target.value);
   const onSecondSelectChange = ({ target }) => setConvertCurrency(target.value);
-
   const handleCashChange = ({ target }) => {
     setCash(target.value);
   };
-
+  const convertCurrencySelect = currencyValues.find(({ currencyName }) => currencyName === convertCurrency).value
   const handleButtonClick = () => {
     const cashInput = +cashValue;
     const currencySelect = +currency;
-    const convertCurrencySelect = +convertCurrency;
     const result = ((cashInput * currencySelect) / convertCurrencySelect);
-    setResult(result.toFixed(2))
+    setResult(result.toFixed(2) + " " + convertCurrency)
   };
 
   return (
 
     <Container image={image}>
+      <Clock />
       <SectionForm
         title="Currency calculator"
         body={
@@ -66,7 +66,7 @@ function App() {
               convertCurrency={convertCurrency}
               handleButtonClick={handleButtonClick}
             />
-            < ExchangeRate currency={currency} convertCurrency={convertCurrency} />
+            < ExchangeRate currency={currency} convertCurrencySelect={convertCurrencySelect} />
             <Result result={result} />
           </>}
       />
