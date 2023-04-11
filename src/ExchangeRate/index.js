@@ -1,7 +1,7 @@
 import "./index.css"
 
-const ExchangeRate = ({ currency, convertCurrencyValue }) => {
-    const finalCurrency = currency / convertCurrencyValue;
+const ExchangeRate = ({ currency, convertCurrency }) => {
+    const finalCurrency = currency / convertCurrency;
     return (
         <p className="results">
             Exchange rate:

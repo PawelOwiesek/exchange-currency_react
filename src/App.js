@@ -12,7 +12,7 @@ import { currencyValues } from "./currencies";
 
 const CLOUDS_BACKGROUND_URL = `https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`;
 const MONEY_BACKGROUND_URL = `https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`;
-const DEFAULT_CURRENCY = currencyValues[0].currencyName;
+const DEFAULT_CURRENCY = currencyValues[0].value;
 
 function App() {
   const [image, setImage] = useState(CLOUDS_BACKGROUND_URL);
@@ -29,12 +29,11 @@ function App() {
   const onSecondSelectChange = ({ target }) => setConvertCurrency(target.value);
   const handleCashChange = ({ target }) => setCash(target.value);
 
-  const convertCurrencyValue = currencyValues.find(({ currencyName }) => currencyName === convertCurrency).value
   const handleButtonClick = () => {
     const cashInput = +cashValue;
     const currencySelect = +currency;
-    const result = ((cashInput * currencySelect) / convertCurrencyValue);
-    setResult(result.toFixed(2) + " " + convertCurrency)
+    const finalResult = ((cashInput * currencySelect) / convertCurrency).toFixed(2);
+    setResult(finalResult);
   };
 
   return (
@@ -65,7 +64,7 @@ function App() {
               convertCurrency={convertCurrency}
               handleButtonClick={handleButtonClick}
             />
-            < ExchangeRate currency={currency} convertCurrencyValue={convertCurrencyValue} />
+            < ExchangeRate currency={currency} convertCurrency={convertCurrency} />
             <Result result={result} />
           </>}
       />

@@ -1,9 +1,10 @@
 
 
 const Clock = () => {
-    // const time = new Date();
+    const time = new Date();
+    setInterval(1000)
     return (
-        <p className="clock">{ }Tu pojawi sie zegarek</p>
+        <p className="clock">{time.toString()}</p>
     )
 }
 
