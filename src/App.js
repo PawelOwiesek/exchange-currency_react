@@ -27,9 +27,8 @@ function App() {
 
   const onSelectChange = ({ target }) => setCurrency(target.value);
   const onSecondSelectChange = ({ target }) => setConvertCurrency(target.value);
-  const handleCashChange = ({ target }) => {
-    setCash(target.value);
-  };
+  const handleCashChange = ({ target }) => setCash(target.value);
+
   const convertCurrencyValue = currencyValues.find(({ currencyName }) => currencyName === convertCurrency).value
   const handleButtonClick = () => {
     const cashInput = +cashValue;
