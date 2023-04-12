@@ -3,7 +3,7 @@ const Result = ({ result }) => {
         <p className="results">
             Amount after conversion:
             <strong>
-                {result.convertedResult} {result.convertCurrency}
+                {result.convertedResult} {result.currencyTo}
             </strong>
         </p>
     );
