@@ -12,12 +12,12 @@ import { currencyValues } from "./currencies";
 
 const CLOUDS_BACKGROUND_URL = `https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`;
 const MONEY_BACKGROUND_URL = `https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`;
-const DEFAULT_CURRENCY = currencyValues[0].value;
+const DEFAULT_CURRENCY = currencyValues[0].currencyName;
 
 function App() {
   const [image, setImage] = useState(CLOUDS_BACKGROUND_URL);
-  const [currency, setCurrency] = useState(DEFAULT_CURRENCY);
-  const [convertCurrency, setConvertCurrency] = useState(DEFAULT_CURRENCY);
+  const [currencyFrom, setCurrencyForm] = useState(DEFAULT_CURRENCY);
+  const [currencyTo, setCurrencyTo] = useState(DEFAULT_CURRENCY);
   const [cashValue, setCash] = useState("");
   const [result, setResult] = useState("");
 
@@ -25,20 +25,24 @@ function App() {
     setImage(prevImage => prevImage === CLOUDS_BACKGROUND_URL ? MONEY_BACKGROUND_URL : CLOUDS_BACKGROUND_URL);
   };
 
-  const onSelectChange = ({ target }) => setCurrency(target.value);
-  const onSecondSelectChange = ({ target }) => setConvertCurrency(target.value);
+  const onSelectChange = ({ target }) => setCurrencyForm(target.value);
+  const onSecondSelectChange = ({ target }) => setCurrencyTo(target.value);
   const handleCashChange = ({ target }) => setCash(target.value);
 
   const handleButtonClick = () => {
     const cashInput = +cashValue;
-    const currencySelect = +currency;
-    const convertedResult = ((cashInput * currencySelect) / convertCurrency).toFixed(2);
+    const currencyFromRate = currencyValues.find(({ currencyName }) => currencyName === currencyFrom).value;
+    const currencyToRate = currencyValues.find(({ currencyName }) => currencyName === currencyTo).value;
+    const convertedResult = ((cashInput * currencyFromRate) / currencyToRate).toFixed(2);
 
     setResult({
-      currency,
-      convertCurrency,
-      convertedResult
+      currencyTo,
+      currencyFrom,
+      convertedResult,
+      currencyFromRate,
+      currencyToRate
     });
+
   };
 
   return (
@@ -55,9 +59,9 @@ function App() {
               handleCashChange={handleCashChange}
             />
             <SelectCurrencies
-              currency={currency}
+              currency={currencyFrom}
               onSelectChange={onSelectChange}
-              convertCurrency={convertCurrency}
+              convertCurrency={currencyTo}
               onSecondSelectChange={onSecondSelectChange}
             />
           </>}
@@ -65,11 +69,11 @@ function App() {
           <>
             <RecalculateButton
               cashValue={cashValue}
-              currency={currency}
-              convertCurrency={convertCurrency}
+              currency={currencyFrom}
+              convertCurrency={currencyTo}
               handleButtonClick={handleButtonClick}
             />
-            < ExchangeRate currency={currency} convertCurrency={convertCurrency} />
+            < ExchangeRate result={result} />
             <Result result={result} />
           </>}
       />
