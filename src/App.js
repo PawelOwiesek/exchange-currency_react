@@ -32,8 +32,13 @@ function App() {
   const handleButtonClick = () => {
     const cashInput = +cashValue;
     const currencySelect = +currency;
-    const finalResult = ((cashInput * currencySelect) / convertCurrency).toFixed(2);
-    setResult(finalResult);
+    const convertedResult = ((cashInput * currencySelect) / convertCurrency).toFixed(2);
+
+    setResult({
+      currency,
+      convertCurrency,
+      convertedResult
+    });
   };
 
   return (
