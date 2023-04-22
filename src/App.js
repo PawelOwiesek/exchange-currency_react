@@ -48,13 +48,13 @@ function App() {
   return (
 
     <Container image={image}>
-      <Clock />
       <SectionForm
         title="Currency calculator"
         body={
           <>
             <Button toggleImage={toggleImage}
             />
+            <Clock />
             <Cash cashValue={cashValue}
               handleCashChange={handleCashChange}
             />
