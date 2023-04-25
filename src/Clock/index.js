@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
 import "./index.css";
 
+const formatDate = (date) =>
+    date.toLocaleString("en", {
+        weekday: "long",
+        day: "numeric",
+        month: "long",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+    });
+
 const Clock = () => {
     const [date, setDate] = useState(new Date());
 
@@ -14,20 +24,8 @@ const Clock = () => {
         };
     }, []);
 
-    const formatedDate = (date) =>
-        date.toLocaleString("en", {
-            weekday: "long",
-            day: "numeric",
-            month: "long",
-            hour: "numeric",
-            minute: "numeric",
-            second: "numeric",
-        });
-
-
-
     return (
-        <span className="clock">{formatedDate(date)}</span>
+        <span className="clock">{formatDate(date)}</span>
     )
 }
 
