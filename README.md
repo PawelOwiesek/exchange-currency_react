@@ -6,9 +6,11 @@
 ### **React**
 ### **create-react-app**
 
-![Screenshot 2023-03-31 154515](https://user-images.githubusercontent.com/121549413/229137662-b0d1c63e-ee1f-428a-8554-ac006d3fb218.png)
+![Screenshot 2023-04-27 135319](https://user-images.githubusercontent.com/121549413/234854147-5a2bc8b2-4e20-4f5d-881f-4b70ea4d793d.png)
 
 ## Try it out at:https://pawelowiesek.github.io/exchange-currency_react/
+![Animation LifeIsFeudalPAge](https://user-images.githubusercontent.com/121549413/234854420-fea032cb-5553-4930-89c6-ce88c4fd685e.gif)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
