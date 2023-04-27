@@ -16,7 +16,7 @@ const DEFAULT_CURRENCY = currencyValues[0].currencyName;
 
 function App() {
   const [image, setImage] = useState(CLOUDS_BACKGROUND_URL);
-  const [currencyFrom, setCurrencyForm] = useState(DEFAULT_CURRENCY);
+  const [currencyFrom, setCurrencyFrom] = useState(DEFAULT_CURRENCY);
   const [currencyTo, setCurrencyTo] = useState(DEFAULT_CURRENCY);
   const [cashValue, setCash] = useState("");
   const [result, setResult] = useState("");
@@ -25,7 +25,7 @@ function App() {
     setImage(prevImage => prevImage === CLOUDS_BACKGROUND_URL ? MONEY_BACKGROUND_URL : CLOUDS_BACKGROUND_URL);
   };
 
-  const onSelectChange = ({ target }) => setCurrencyForm(target.value);
+  const onSelectChange = ({ target }) => setCurrencyFrom(target.value);
   const onSecondSelectChange = ({ target }) => setCurrencyTo(target.value);
   const handleCashChange = ({ target }) => setCash(target.value);
 
@@ -69,7 +69,7 @@ function App() {
           <>
             <RecalculateButton
               cashValue={cashValue}
-              currency={currencyFrom}
+              currencyFrom={currencyFrom}
               convertCurrency={currencyTo}
               handleButtonClick={handleButtonClick}
             />

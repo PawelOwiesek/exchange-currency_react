@@ -1,6 +1,6 @@
 import { currencyValues } from "../currencies";
 
-const SelectCurrencies = ({ currency, onSelectChange, convertCurrency, onSecondSelectChange }) => {
+const SelectCurrencies = ({ currencyFrom, onSelectChange, convertCurrency, onSecondSelectChange }) => {
 
     return (
         <>
@@ -8,7 +8,7 @@ const SelectCurrencies = ({ currency, onSelectChange, convertCurrency, onSecondS
                 <label>
                     <span className="calculator__fieldset--label">Your currency:</span>
                     <select
-                        value={currency}
+                        value={currencyFrom}
                         onChange={onSelectChange}
                         className="calculator__fieldset--field"
                     >
