@@ -5,7 +5,7 @@ export const StyledSpan = styled.span`
     font-size: 22px;
     width: 250px;
     display: inline-block;
-`
+`;
 
 export const StyledInput = styled.input`
  
@@ -14,10 +14,9 @@ export const StyledInput = styled.input`
     text-align: center;
     border-radius: 25px;
     padding: 10px;
-    border: 2px solid #000000;
+    border: 2px solid ${({ theme }) => theme.colors.black};
 
-@media(max-width:660px) {
+@media(max-width:${({ theme }) => theme.breakpoints.mobile}px) {
         min-width: 90vw;
 };
-
-`
+`;

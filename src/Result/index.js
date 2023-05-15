@@ -9,6 +9,6 @@ const Result = ({ result }) => {
             </strong>
         </StyledParagraph>
     );
-}
+};
 
 export default Result;

@@ -3,13 +3,13 @@ import styled from "styled-components";
 export const StyledButton = styled.button`
     font-size: 22px;
     width: 100%;
-    background-color: #637bae6e;
+    background-color:${({ theme }) => theme.colors.waikawa};
     align-self: center;
     padding: 5px;
-    border: 2px solid #000000;
+    border: 2px solid ${({ theme }) => theme.colors.black};
     border-radius: 25px;
     text-align: center;
-    color: white;
+    color: ${({ theme }) => theme.colors.white};
     letter-spacing: 8px;
     font-weight: 900;
-`
+`;

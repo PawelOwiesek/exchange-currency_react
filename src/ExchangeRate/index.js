@@ -5,7 +5,7 @@ const ExchangeRate = ({ result }) => {
     let finalCurrency = result.currencyFromRate / result.currencyToRate;
     if (result === "") {
         finalCurrency = 0
-    }
+    };
 
     return (
         <StyledParagraph>

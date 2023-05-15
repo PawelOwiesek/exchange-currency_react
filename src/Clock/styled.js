@@ -6,4 +6,4 @@ export const StyledSpan = styled.span`
     justify-content: flex-end;
     font-weight: bold;
     margin-bottom: 40px;
-`
+`;
