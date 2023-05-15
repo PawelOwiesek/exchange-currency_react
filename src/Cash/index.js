@@ -1,16 +1,13 @@
-import "./index.css";
+import { StyledInput, StyledSpan } from "./styled";
 
 const Cash = ({ cashValue, handleCashChange }) => (
     <p>
         <label
-        ><span className="calculator__fieldset--label"
-        >Enter the amount of cash:</span
-            >
-            <input
+        ><StyledSpan >Enter the amount of cash:</StyledSpan>
+            <StyledInput
                 value={cashValue}
                 onChange={handleCashChange}
                 type="number"
-                className="calculator__fieldset--field"
                 step="any"
                 min="1"
                 required

@@ -1,4 +1,4 @@
-import "./index.css";
+import { StyledForm, StyledTitle, StyledFieldset } from "./styled";
 
 const SectionForm = ({ title, body, result }) => {
     const onFormSubmit = (event) => {
@@ -6,14 +6,14 @@ const SectionForm = ({ title, body, result }) => {
     };
 
     return (
-        <section className="calculator">
-            <h1 className="calculator__title">{title}</h1>
-            <form onSubmit={onFormSubmit} className="calculator__form">
-                <fieldset className="calculator__fieldset">
+        <section>
+            <StyledTitle>{title}</StyledTitle>
+            <StyledForm onSubmit={onFormSubmit}>
+                <StyledFieldset>
                     {body}
                     {result}
-                </fieldset>
-            </form>
+                </StyledFieldset>
+            </StyledForm>
         </section>
     );
 };

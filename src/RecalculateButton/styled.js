@@ -1,4 +1,6 @@
-.calculator__form--button {
+import styled from "styled-components";
+
+export const StyledButton = styled.button`
     font-size: 22px;
     width: 100%;
     background-color: #637bae6e;
@@ -10,4 +12,4 @@
     color: white;
     letter-spacing: 8px;
     font-weight: 900;
-}
+`

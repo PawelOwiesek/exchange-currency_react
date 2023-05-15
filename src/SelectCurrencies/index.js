@@ -1,4 +1,5 @@
 import { currencyValues } from "../currencies";
+import { StyledInput, StyledSpan } from "../Cash/styled";
 
 const SelectCurrencies = ({ currencyFrom, onSelectChange, convertCurrency, onSecondSelectChange }) => {
 
@@ -6,11 +7,10 @@ const SelectCurrencies = ({ currencyFrom, onSelectChange, convertCurrency, onSec
         <>
             <p>
                 <label>
-                    <span className="calculator__fieldset--label">Your currency:</span>
-                    <select
+                    <StyledSpan>Your currency:</StyledSpan>
+                    <StyledInput as="select"
                         value={currencyFrom}
                         onChange={onSelectChange}
-                        className="calculator__fieldset--field"
                     >
                         {currencyValues.map((currency => (<option
                             key={currency.id}
@@ -19,23 +19,22 @@ const SelectCurrencies = ({ currencyFrom, onSelectChange, convertCurrency, onSec
                             {currency.currencyName}
                         </option>
                         )))};
-                    </select>
+                    </StyledInput>
                 </label>
             </p>
             <p>
                 <label>
-                    <span className="calculator__fieldset--label">Convert to:</span>
-                    <select
+                    <StyledSpan>Convert to:</StyledSpan>
+                    <StyledInput as="select"
                         value={convertCurrency}
-                        onChange={onSecondSelectChange}
-                        className="calculator__fieldset--field">
+                        onChange={onSecondSelectChange}>
                         {currencyValues.map((convertCurrency => (<option
                             value={convertCurrency.currencyName}
                             key={convertCurrency.id}>
                             {convertCurrency.currencyName}
                         </option>
                         )))}
-                    </select>
+                    </StyledInput>
                 </label>
             </p>
         </>

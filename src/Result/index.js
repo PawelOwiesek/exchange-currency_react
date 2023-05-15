@@ -1,11 +1,13 @@
+import { StyledParagraph } from "../ExchangeRate/styled";
+
 const Result = ({ result }) => {
     return (
-        <p className="results">
+        <StyledParagraph>
             Amount after conversion:
             <strong>
                 {result.convertedResult} {result.currencyTo}
             </strong>
-        </p>
+        </StyledParagraph>
     );
 }
 

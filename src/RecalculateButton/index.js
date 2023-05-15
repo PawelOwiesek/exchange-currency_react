@@ -1,9 +1,9 @@
-import "./index.css";
+import { StyledButton } from "./styled";
 
 const RecalculateButton = ({ handleButtonClick }) => {
 
     return (
-        <button onClick={handleButtonClick} className="calculator__form--button">Recalculate</button>
+        <StyledButton onClick={handleButtonClick}>Recalculate</StyledButton>
     );
 };
 

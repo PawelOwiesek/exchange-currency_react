@@ -1,6 +1,6 @@
-import "./index.css";
+import { StyledButton } from "./styled";
 
 const Button = ({ toggleImage }) => (
-    <button onClick={toggleImage} className="button">Change image</button>)
+    <StyledButton onClick={toggleImage} className="button">Change image</StyledButton>)
 
 export default Button;

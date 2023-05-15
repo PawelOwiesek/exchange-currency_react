@@ -1,13 +1,14 @@
-import "./index.css"
+import { StyledWrapper } from "./styled";
+
 const Container = ({ image, children }) => {
     const backgroundStyle = {
         backgroundImage: `url(${image})`
     };
 
     return (
-        <div className="container" style={backgroundStyle}>
+        <StyledWrapper style={backgroundStyle}>
             {children}
-        </div>
+        </StyledWrapper>
     );
 };
 

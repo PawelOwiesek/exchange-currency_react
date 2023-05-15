@@ -1,5 +1,7 @@
-.button {
-    display: block;
+import styled from "styled-components";
+
+export const StyledButton = styled.button`
+     display: block;
     max-width: 120px;
     border: 2px solid #000000;
     border-radius: 25px;
@@ -8,9 +10,9 @@
     transition: 1s;
     cursor: pointer;
     margin: 5px;
-}
 
-.button:hover {
-    background-color: #637bae;
-    transform: scale(1.1);
-}
+    &:hover{
+        background-color: #637bae;
+        transform: scale(1.1);
+    }
+`

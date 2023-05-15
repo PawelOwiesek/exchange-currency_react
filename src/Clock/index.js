@@ -1,5 +1,5 @@
 import { useCurrentDate } from "./useCurrentDate";
-import "./index.css";
+import { StyledSpan } from "./styled";
 
 const formatDate = (date) =>
     date.toLocaleString("en", {
@@ -15,7 +15,7 @@ const Clock = () => {
     const date = useCurrentDate();
 
     return (
-        <span className="clock">{formatDate(date)}</span>
+        <StyledSpan>{formatDate(date)}</StyledSpan>
     )
 };
 

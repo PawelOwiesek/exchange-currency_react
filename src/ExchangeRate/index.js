@@ -1,4 +1,4 @@
-import "./index.css"
+import { StyledParagraph } from "./styled";
 
 const ExchangeRate = ({ result }) => {
 
@@ -8,12 +8,12 @@ const ExchangeRate = ({ result }) => {
     }
 
     return (
-        <p className="results">
+        <StyledParagraph>
             Exchange rate:
             <strong>
                 {finalCurrency.toFixed(2)}
             </strong>
-        </p>
+        </StyledParagraph>
     );
 };
 
