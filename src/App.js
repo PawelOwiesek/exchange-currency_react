@@ -40,9 +40,8 @@ function App() {
       currencyFrom,
       convertedResult,
       currencyFromRate,
-      currencyToRate
+      currencyToRate,
     });
-
   };
 
   return (
