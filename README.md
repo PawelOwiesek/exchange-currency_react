@@ -1,10 +1,13 @@
 # This is a simple currency calculator created first in Vanilla.js and moved to React.
 ### Technologies used in this project:
-### **HTML**
-### **CSS**
-### **JavaScript (ES6+)**
-### **React**
-### **create-react-app**
+- **HTML**
+- **CSS**
+- **JavaScript (ES6+)**
+- **React**
+- **create-react-app**
+- **Styled Components**
+- **UseEffect & UseState hooks**
+
 
 ![Screenshot 2023-04-27 135319](https://user-images.githubusercontent.com/121549413/234854147-5a2bc8b2-4e20-4f5d-881f-4b70ea4d793d.png)
 
