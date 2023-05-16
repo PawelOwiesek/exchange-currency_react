@@ -10,8 +10,8 @@ import SectionForm from "./SectionForm";
 import Container from "./Container";
 import { currencyValues } from "./currencies";
 
-const CLOUDS_BACKGROUND_URL = `https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg`;
-const MONEY_BACKGROUND_URL = `https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg`;
+const CLOUDS_BACKGROUND_URL = "https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg";
+const MONEY_BACKGROUND_URL = "https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg";
 const DEFAULT_CURRENCY = currencyValues[0].currencyName;
 
 function App() {
