@@ -14,7 +14,9 @@
 
 ## Try it out at:https://pawelowiesek.github.io/exchange-currency_react/
 
-![Animation Calculator](https://github.com/PawelOwiesek/exchange-currency_react/assets/121549413/9a67a3f2-9fa2-4330-b6b8-dd38e0ad7f4f)
+![Animation Calculator2](https://github.com/PawelOwiesek/exchange-currency_react/assets/121549413/ca6431e1-5991-4c7c-8e71-c051f7d48527)
+![Animation Calculator](https://github.com/PawelOwiesek/exchange-currency_react/assets/121549413/1869575f-19ec-4241-aa5c-6b3d47dfd275)
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
