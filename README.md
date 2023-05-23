@@ -14,7 +14,7 @@
 
 ## Try it out at:https://pawelowiesek.github.io/exchange-currency_react/
 
-![Animation Calculator2](https://github.com/PawelOwiesek/exchange-currency_react/assets/121549413/ca6431e1-5991-4c7c-8e71-c051f7d48527)
+![Animation Calculator2](https://github.com/PawelOwiesek/exchange-currency_react/assets/121549413/ca6431e1-5991-4c7c-8e71-c051f7d48527)<br/>
 ![Animation Calculator](https://github.com/PawelOwiesek/exchange-currency_react/assets/121549413/1869575f-19ec-4241-aa5c-6b3d47dfd275)
 
 
