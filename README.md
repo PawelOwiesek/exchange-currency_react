@@ -7,12 +7,14 @@
 - **create-react-app**
 - **Styled Components**
 - **UseEffect & UseState hooks**
+- **Axios**
 
+![Screenshot 2023-05-23 184803](https://github.com/PawelOwiesek/exchange-currency_react/assets/121549413/8a477b13-197c-43f4-808e-d1d0abd9ebd3)
 
-![Screenshot 2023-04-27 135319](https://user-images.githubusercontent.com/121549413/234854147-5a2bc8b2-4e20-4f5d-881f-4b70ea4d793d.png)
 
 ## Try it out at:https://pawelowiesek.github.io/exchange-currency_react/
-![Animation LifeIsFeudalPAge](https://user-images.githubusercontent.com/121549413/234854420-fea032cb-5553-4930-89c6-ce88c4fd685e.gif)
+
+![Animation Calculator](https://github.com/PawelOwiesek/exchange-currency_react/assets/121549413/9a67a3f2-9fa2-4330-b6b8-dd38e0ad7f4f)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
