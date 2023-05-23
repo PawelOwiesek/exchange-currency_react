@@ -1,4 +1,3 @@
-import { currencyValues } from "../currencies";
 import { StyledInput, StyledSpan } from "../Cash/styled";
 
 const SelectCurrencies = ({
@@ -6,6 +5,7 @@ const SelectCurrencies = ({
   onSelectChange,
   convertCurrency,
   onSecondSelectChange,
+  currencyRates,
 }) => {
   return (
     <>
@@ -17,11 +17,12 @@ const SelectCurrencies = ({
             value={currencyFrom}
             onChange={onSelectChange}
           >
-            {currencyValues.map((currency) => (
-              <option key={currency.id} value={currency.currencyName}>
-                {currency.currencyName}
-              </option>
-            ))}
+            {currencyRates?.rates &&
+              Object.keys(currencyRates.rates).map((currency) => (
+                <option key={currency} value={currency}>
+                  {currency}
+                </option>
+              ))}
             ;
           </StyledInput>
         </label>
@@ -34,14 +35,12 @@ const SelectCurrencies = ({
             value={convertCurrency}
             onChange={onSecondSelectChange}
           >
-            {currencyValues.map((convertCurrency) => (
-              <option
-                value={convertCurrency.currencyName}
-                key={convertCurrency.id}
-              >
-                {convertCurrency.currencyName}
-              </option>
-            ))}
+            {currencyRates?.rates &&
+              Object.keys(currencyRates.rates).map((currency) => (
+                <option value={currency} key={currency}>
+                  {currency}
+                </option>
+              ))}
           </StyledInput>
         </label>
       </p>
