@@ -40,7 +40,7 @@ export const Loading = styled.div`
   align-self: center;
   justify-content: center;
   align-items: center;
-  font-size: 25px;
+  font-size: 15px;
   letter-spacing: 1.5px;
   padding: 20px;
   margin-bottom: 10px;

@@ -10,7 +10,7 @@ const Result = ({ result, currencyRates }) => {
         </strong>
       </StyledParagraph>
       <StyledParagraph>
-        <strong>
+        <strong style={{ fontSize: "15px" }}>
           Exchange rates are taken from <br />
           the European Central Bank.{currencyRates.date}
         </strong>
