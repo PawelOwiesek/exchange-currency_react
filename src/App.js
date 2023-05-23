@@ -8,18 +8,19 @@ import ExchangeRate from "./ExchangeRate";
 import Result from "./Result";
 import SectionForm from "./SectionForm";
 import Container from "./Container";
-import { currencyValues } from "./currencies";
+import { useDataRates } from "./useDataRates";
+import { Loading, Error } from "./SectionForm/styled";
 
 const CLOUDS_BACKGROUND_URL =
   "https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg";
 const MONEY_BACKGROUND_URL =
   "https://i.postimg.cc/8z4DYzW4/giorgio-trovato-Wyxq-Qpy-FNk8-unsplash.jpg";
-const DEFAULT_CURRENCY = currencyValues[0].currencyName;
 
 function App() {
+  const currencyRates = useDataRates();
   const [image, setImage] = useState(CLOUDS_BACKGROUND_URL);
-  const [currencyFrom, setCurrencyFrom] = useState(DEFAULT_CURRENCY);
-  const [currencyTo, setCurrencyTo] = useState(DEFAULT_CURRENCY);
+  const [currencyFrom, setCurrencyFrom] = useState();
+  const [currencyTo, setCurrencyTo] = useState();
   const [cashValue, setCash] = useState("");
   const [result, setResult] = useState("");
 
@@ -37,12 +38,8 @@ function App() {
 
   const handleButtonClick = () => {
     const cashInput = +cashValue;
-    const currencyFromRate = currencyValues.find(
-      ({ currencyName }) => currencyName === currencyFrom
-    ).value;
-    const currencyToRate = currencyValues.find(
-      ({ currencyName }) => currencyName === currencyTo
-    ).value;
+    const currencyFromRate = currencyRates.rates[currencyFrom];
+    const currencyToRate = currencyRates.rates[currencyTo];
     const convertedResult = (
       (cashInput * currencyFromRate) /
       currencyToRate
@@ -65,13 +62,38 @@ function App() {
           <>
             <Button toggleImage={toggleImage} />
             <Clock />
-            <Cash cashValue={cashValue} handleCashChange={handleCashChange} />
-            <SelectCurrencies
-              currency={currencyFrom}
-              onSelectChange={onSelectChange}
-              convertCurrency={currencyTo}
-              onSecondSelectChange={onSecondSelectChange}
-            />
+            {currencyRates.state === "loading" ? (
+              <Loading>
+                Pleas wait.{" "}
+                <i
+                  class="fa-solid fa-clock fa-spin fa-2xl"
+                  style={{ color: "#00b3ff", margin: "20px" }}
+                ></i>{" "}
+                We're getting things ready for You...
+              </Loading>
+            ) : currencyRates.state === "error" ? (
+              <Error>
+                <i
+                  class="fa-solid fa-circle-exclamation fa-beat fa-2xl"
+                  style={{ color: "#fafe10", marginRight: "10px" }}
+                ></i>
+                Sorry, there's a problem with the server...
+              </Error>
+            ) : (
+              <div>
+                <Cash
+                  cashValue={cashValue}
+                  handleCashChange={handleCashChange}
+                />
+                <SelectCurrencies
+                  currencyRates={currencyRates}
+                  currency={currencyFrom}
+                  onSelectChange={onSelectChange}
+                  convertCurrency={currencyTo}
+                  onSecondSelectChange={onSecondSelectChange}
+                />
+              </div>
+            )}
           </>
         }
         result={
@@ -83,7 +105,7 @@ function App() {
               handleButtonClick={handleButtonClick}
             />
             <ExchangeRate result={result} />
-            <Result result={result} />
+            <Result result={result} currencyRates={currencyRates} />
           </>
         }
       />
