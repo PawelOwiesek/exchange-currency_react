@@ -9,7 +9,7 @@ import Result from "./Result";
 import SectionForm from "./SectionForm";
 import Container from "./Container";
 import { useDataRates } from "./useDataRates";
-import { Error, Loading } from "./FetchApi";
+import { Error, Loading } from "./FetchApiDisplay";
 
 const CLOUDS_BACKGROUND_URL =
   "https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg";
@@ -62,12 +62,12 @@ function App() {
           <>
             <Button toggleImage={toggleImage} />
             <Clock />
-            {currencyRates.state === "loading" ? (
+            {currencyRates.status === "loading" ? (
               <Loading />
-            ) : currencyRates.state === "error" ? (
+            ) : currencyRates.status === "error" ? (
               <Error />
             ) : (
-              <div>
+              <>
                 <Cash
                   cashValue={cashValue}
                   handleCashChange={handleCashChange}
@@ -79,7 +79,7 @@ function App() {
                   convertCurrency={currencyTo}
                   onSecondSelectChange={onSecondSelectChange}
                 />
-              </div>
+              </>
             )}
           </>
         }
