@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const StyledLoader = styled.div`
-  width: fit-content;
-  height: fit-content;
+  width: 475px;
+  height: 150px;
   display: flex;
   align-self: center;
   justify-content: center;
