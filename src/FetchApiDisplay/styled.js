@@ -15,7 +15,14 @@ export const StyledLoader = styled.div`
   background-color: ${({ theme }) => theme.colors.transparentBlue};
   border-radius: 25px;
   border: 2px solid ${({ theme }) => theme.colors.white};
+
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    max-width: 90vw;
+  }
 `;
 export const StyledError = styled(StyledLoader)`
   background-color: ${({ theme }) => theme.colors.crimson};
+  @media (max-width: ${({ theme }) => theme.breakpoints.mobile}px) {
+    max-width: 90vw;
+  }
 `;
