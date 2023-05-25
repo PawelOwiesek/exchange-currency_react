@@ -4,10 +4,10 @@ export const Loading = () => {
   return (
     <StyledLoader>
       Pleas wait.{" "}
-      <i
+      <span
         className="fa-solid fa-clock fa-spin fa-2xl"
-        style={{ color: "#00b3ff", margin: "20px" }}
-      ></i>{" "}
+        style={{ color: "#00b3ff", margin: "10px" }}
+      ></span>{" "}
       We're getting things ready for You...
     </StyledLoader>
   );
@@ -16,10 +16,10 @@ export const Loading = () => {
 export const Error = () => {
   return (
     <StyledError>
-      <i
+      <span
         className="fa-solid fa-circle-exclamation fa-beat fa-2xl"
         style={{ color: "#fafe10", marginRight: "10px" }}
-      ></i>
+      ></span>
       Sorry, there's a problem with the server...
     </StyledError>
   );
