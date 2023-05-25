@@ -9,7 +9,7 @@ import Result from "./Result";
 import SectionForm from "./SectionForm";
 import Container from "./Container";
 import { useDataRates } from "./useDataRates";
-import { Loading, Error } from "./SectionForm/styled";
+import { Error, Loading } from "./FetchApi";
 
 const CLOUDS_BACKGROUND_URL =
   "https://i.postimg.cc/j55CcnT5/ritam-baishya-ROVBDer29-PQ-unsplash.jpg";
@@ -19,8 +19,8 @@ const MONEY_BACKGROUND_URL =
 function App() {
   const currencyRates = useDataRates();
   const [image, setImage] = useState(CLOUDS_BACKGROUND_URL);
-  const [currencyFrom, setCurrencyFrom] = useState();
-  const [currencyTo, setCurrencyTo] = useState();
+  const [currencyFrom, setCurrencyFrom] = useState("EUR");
+  const [currencyTo, setCurrencyTo] = useState("PLN");
   const [cashValue, setCash] = useState("");
   const [result, setResult] = useState("");
 
@@ -63,22 +63,9 @@ function App() {
             <Button toggleImage={toggleImage} />
             <Clock />
             {currencyRates.state === "loading" ? (
-              <Loading>
-                Pleas wait.{" "}
-                <i
-                  class="fa-solid fa-clock fa-spin fa-2xl"
-                  style={{ color: "#00b3ff", margin: "20px" }}
-                ></i>{" "}
-                We're getting things ready for You...
-              </Loading>
+              <Loading />
             ) : currencyRates.state === "error" ? (
-              <Error>
-                <i
-                  class="fa-solid fa-circle-exclamation fa-beat fa-2xl"
-                  style={{ color: "#fafe10", marginRight: "10px" }}
-                ></i>
-                Sorry, there's a problem with the server...
-              </Error>
+              <Error />
             ) : (
               <div>
                 <Cash
