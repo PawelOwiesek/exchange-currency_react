@@ -19,7 +19,7 @@ const MONEY_BACKGROUND_URL =
 function App() {
   const currencyRates = useDataRates();
   const [image, setImage] = useState(CLOUDS_BACKGROUND_URL);
-  const [currencyFrom, setCurrencyFrom] = useState("EUR");
+  const [currencyFrom, setCurrencyFrom] = useState("USD");
   const [currencyTo, setCurrencyTo] = useState("PLN");
   const [cashValue, setCash] = useState("");
   const [result, setResult] = useState("");
