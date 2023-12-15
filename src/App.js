@@ -41,8 +41,8 @@ function App() {
     const currencyFromRate = currencyRates.rates[currencyFrom];
     const currencyToRate = currencyRates.rates[currencyTo];
     const convertedResult = (
-      (cashInput * currencyFromRate) /
-      currencyToRate
+      (cashInput * currencyToRate) /
+      currencyFromRate
     ).toFixed(2);
 
     setResult({
